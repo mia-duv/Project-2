@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <title>Profile Page</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MVS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Game 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Game 2</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Game 3</a>
+          </li>
+  </nav>
+
+  <!-- Original nav bar -->
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">VMS App Logo</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Log In</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Games</a></li>
+          </ul>
+        </div>
+      </nav> -->
+
+      <!-- main content -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Profile</h1>
+            <h2>First & Last Name</h2>
+  <p>You can edit and save your lucky numbers below.</p>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Username</div>
+      <div class="panel-body">player1</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Email</div>
+      <div class="panel-body">player1@email.com</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Lucky Numbers</div>
+      <div id="luckyNums" class="panel-body">2-6-10-18-28-50-79</div>
+    </div>
+    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Edit</button>
+  </div>
+</div>
+    <!-- MODAL to update lucky numbers -->
+
+     <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+          <h4 class="modal-title">Update Numbers</h4>
+        </div>
+        <div class="modal-body">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="numbers" id="modalEditNumbers" class="form-control validate" placeholder="Enter New Numbers Here">
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="editNum" class="btn btn-default" data-dismiss="modal">Update</button>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+
+
+<script>
+  $( "input" )
+  .keyup(function() {
+    event.preventDefault();
+    var value = $( "#modalEditNumbers" ).val();
+    $( "#luckyNums" ).text( value );
+    console.log(value);
+  })
+  .keyup();
+
+</script>
+    
+   
+</body>
+</html>

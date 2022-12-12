@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/nessacor16/VMS-Project2#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ava": "^3.3.0",
     "bcrypt": "^3.0.8",
     "bcrypt-nodejs": "0.0.3",
